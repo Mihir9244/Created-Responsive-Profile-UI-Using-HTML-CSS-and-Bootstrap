@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Webpage</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            
+            
+        }
+        .navbar-brand {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            padding-left: 60px;
+        }
+
+        .navbar-brand:hover{
+            color: rgba(240, 248, 255, 0.867);
+        }
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover{
+            color: grey;
+        }
+            
+
+        .dropdown-menu {
+            background-color: #343a40;
+            color: white;
+        }
+
+
+        .dropdown-item:hover {
+            background-color:  #777;
+            color: rgba(255, 255, 255, 0.798); 
+        }
+
+        .dropdown-menu a{
+            color: white;
+       
+        }
+        .navbar-nav {
+            margin: 0 auto; 
+        }
+
+        .btn{
+            color: #777;
+            border-color: aliceblue;
+            margin-right: 50px;
+            height: 40px;
+            width: 140px;
+        }
+
+        .btn:hover{
+            background-color: grey;
+            border-color: aliceblue;
+        }
+ 
+        .carousel-item {
+            height: 500px;
+            box-shadow: 40px 20px 20px 10px rgba(0, 0.5, 0.5, 0.1);
+           
+     
+        }
+        .carousel-item img {
+            object-fit: cover;
+            opacity: 50%;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-caption {
+            background-color: transparent;
+            color: black; 
+            font-weight: bolder;
+            margin-bottom: 15px;
+        }
+
+        button{
+            border-radius: 50px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+
+
+        .section-title {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+      
+        .team-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+       
+        .img-fluid{
+            width: 500px;
+            height: 350px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+            object-fit: cover; 
+            transition: 0.7s;
+        }
+
+        .img-fluid:hover{
+          transform: scale(1.1);
+        }
+
+        .team-text {
+            max-width: 800px;
+            color: black;
+        }
+
+        .team-text h2 {
+            font-size: 24px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .team-text h3{
+          font-size: 24px;
+          font-weight: bold
+        }
+
+        .team-text p {
+            color: #777;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 100px;
+           
+        }
+
+        .team-text .btn {
+            margin-top: 20px;
+            color: #777;
+        }
+
+        .btn-dark{
+          color: white;
+          background-color: #343a40;
+          box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+          transition: 0.5s;
+          margin-top: 5px;
+        }
+
+        .btn-dark:hover{
+          background-color: #777;
+          box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+          transform: scale(0.8);
+        }
+
+        .card{
+          margin: 40px;
+          max-height: 400px;
+          max-width: 300px;
+          transition: 0.5s;
+          box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover{
+          transform: scale(1.1);
+        }
+
+        .card img {
+            max-height: 250px;
+            object-fit: fill;
+        }
+      
+        .category-title {
+            color: #1f2225;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        .category-meta{
+            color: #343a40;
+            font-size: 0.7rem;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer h5 {
+            color: white;
+        }
+
+        .footer a {
+            color: #ddd;
+        }
+
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer .social-links a {
+            font-size: 24px;
+            color: white;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+         <a class="navbar-brand" href="#">Tech Logo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building-fill-gear" viewBox="0 0 16 16">
+              <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7.256A4.5 4.5 0 0 0 12.5 8a4.5 4.5 0 0 0-3.59 1.787A.5.5 0 0 0 9 9.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .39-.187A4.5 4.5 0 0 0 8.027 12H6.5a.5.5 0 0 0-.5.5V16H3a1 1 0 0 1-1-1zm2 1.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m3 0v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+              <path d="M11.886 9.46c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+            </svg></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 2 16 16">
+                  <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+                </svg> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="currentColor" class="bi bi-file-person" viewBox="0 2 16 16">
+                    <path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                    <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                  </svg> About</a>
+              </li>
+
+              <li class="nav-item"></li>
+              <a class="nav-link" href="team"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="currentColor" class="bi bi-people-fill" viewBox="0 2 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+              </svg> Team</a>
+              </li>
+
+
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="Services" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pc-display-horizontal" viewBox="0 1 16 16">
+                    <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5M12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0m2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0M1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25"/>
+                  </svg> Services</a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">SEO Management</a></li>
+                  <li><a class="dropdown-item" href="#">Social Media Marketing</a></li>
+                  <li><a class="dropdown-item" href="#">Email Marketing</a></li>
+                  <li><a class="dropdown-item" href="#">Content Creation & Strategyg</a></li>
+                  <li><a class="dropdown-item" href="#">Website Development & Design</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="currentColor" class="bi bi-telephone-plus" viewBox="0 1 16 16">
+                  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                  <path fill-rule="evenodd" d="M12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5"/>
+                </svg> Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-light" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Carousel section-->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <!-- Slide Section --> 
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/carousel slide1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h1 style="font-weight: bold; color: aliceblue;"> Digital Solution and marketing strategies For Your Business!</h1>
+            <a href="#" class="btn btn-dark mt-2">Explore More</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/carousel slide 2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 style="font-weight: bold; color: #272c31;;">Boost your Brand's Engagement with Social Media Marketing!</h1>
+          <a href="#" class="btn btn-dark mt-2">Explore More</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/carousel slide 3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 style="font-weight: bold; color: #272c31;;">Optimize your online presence organic traffic with expert SEO management!</h1>
+          <a href="#" class="btn btn-dark mt-2">Explore More</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+    <!-- About Section -->
+    <section id="#about">
+        <div class="container">
+            <h2 class="section-title">ABOUT OUR COMPANY</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>About Our Company</h3>
+                    <p>We are a results-driven digital marketing company dedicated to helping businesses thrive online. Our expertise spans SEO, social media marketing, paid ads, and content creation, tailored to your unique goals. With data-backed strategies and a customer-centric approach, we drive brand awareness, engagement, and conversions. Let us help you grow your online presence and achieve measurable success.</p>
+                    <a href="#" class="btn btn-dark">Read More</a>
+                    <hr>
+                    <hr style="width: 60%;">
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="images/business-marketing-banking-digital-technology-marketingfinancial-business-planning-technology_1270349-84188.jpg" alt="Team Illustration" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title"> OUR TEAM</h2>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="images/creative-people-working-office.jpg" alt="Our Team" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3> Our Team</h3>
+                    <p>Our team is a dynamic group of digital marketing experts, each specializing in key areas like SEO, social media, PPC, and content marketing. We bring creativity, analytical skills, and industry knowledge to every campaign we manage. Passionate about driving results, we collaborate closely with clients to ensure their goals are met. Together, we deliver innovative solutions that fuel growth and success.</p>
+                    <a href="#" class="btn btn-dark">Read More</a>
+                    <hr>
+                    <hr style="width: 60%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Services Section Section -->
+    <section id="Services">
+      <div class="container">
+          <h2 class="section-title">OUR SERVICES</h2>
+          <div class="row">
+              <div class="col-md-6">
+                  <h3>Services</h3>
+                  <p>We offer comprehensive digital marketing services designed to grow your brand and drive measurable results. Our solutions include:
+                    <br>
+                    <ul>
+                      <li>SEO Optimization
+                        <li>Social Media Marketing</li>
+                        <li>Email Marketing</li>
+                          <li>Content Creation & Strategy</li>
+                              <li>Website Development & Design</li>
+                    </ul>
+                  </p>
+                  <a href="#" class="btn btn-dark">Read More</a>
+                  <hr>
+                  <hr style="width: 60%;">
+              </div>
+              <div class="col-md-6 text-center">
+                  <img src="images/SEO.jpg" alt="Team Illustration" class="img-fluid">
+              </div>
+          </div>
+      </div>
+  </section>
+    
+    
+    
+  <!-- Reviews Section --> 
+   
+  <h2 class="section-title"> BEST REVIEWS</h2>
+  <div class="row text-center">
+    <div class="col-md-4">
+        <div class="card p-2">
+            <img src="images/male-revies.jpg" alt="Caffe Mocha">
+            <p class="category-title">Mitchell</p>
+            <p class="category-meta">"Working with this digital marketing team has been a game changer for our business. Their expertise in SEO and social media marketing skyrocketed our online presence within months. </p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-2">
+            <img src="images/woman-suit-with-her-arms-crossed_1029679-109790.jpg" alt="Espresso Americano">
+            <p class="category-title">Laura </p>
+            <p class="category-meta">"We were struggling with our digital strategy until we partnered with this company. They revamped our website, optimized our SEO, and implemented a powerful content strategy"</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-2">
+            <img src="images/portrait-male-dark-ash-color-suit-isolated-white-background_1029679-132464.jpg" alt="Cappuccino">
+            <p class="category-title">James</p>
+            <p class="category-meta">"Their SEO strategies have delivered incredible ROI for my business. The team is knowledgeable, friendly, and always transparent about the strategy and results"</p>
+        </div>
+    </div>
+</div>
+</section>  
+    
+    
+    
+  
+  <!-- Info Section -->
+    <section id="info">
+        <div class="container">
+            <h2 class="section-title">Information</h2>
+            <div class="row">
+                <div class="col-md-6">
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/jVgYgN0zcWs?si=YTMzThWsC27qRSw2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-6">
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/FSTY5fU9YA4?si=U2rvCyzlQMmPufbT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Company</h5>
+                    <img src="images/footer logo.png" alt="Company Logo">
+                </div>
+                <div class="col-md-3">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Additional Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Search</h5>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <div class="social-links mt-3">
+                        <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
